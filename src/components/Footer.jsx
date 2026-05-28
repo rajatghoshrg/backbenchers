@@ -1,93 +1,191 @@
-import { Send } from "lucide-react";
+import React from "react";
+
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaLinkedinIn,
+  FaGithub,
+} from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#020817] text-white pt-20 pb-8 px-6 md:px-20 border-t border-cyan-900">
+    <footer className="bg-[#020817] border-t border-[#1e293b] px-6 md:px-12 py-10 text-white">
+
+      {/* Top Footer */}
       <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
 
-        {/* Logo */}
+        {/* Logo & Description */}
         <div>
-          <h1 className="text-3xl font-bold">
-            Backbenchers
-            <span className="text-cyan-400 block">Academy</span>
-          </h1>
 
-          <p className="text-gray-400 mt-4 leading-7">
-            Empowering the next generation of
-            high-performance tech leaders through
-            immersive education.
+          {/* Logo Section */}
+          <div className="flex items-center gap-3">
+
+            {/* Logo Container */}
+            <div className="w-12 h-12 rounded-2xl overflow-hidden border border-[#223047] bg-[#0f172a] flex items-center justify-center shadow-[0_0_20px_rgba(93,230,255,0.15)]">
+
+              {/* Add your logo later */}
+              <img
+                src="/logo.png"
+                alt="Backbenchers Logo"
+                className="w-full h-full object-cover"
+              />
+
+            </div>
+
+            {/* Name */}
+            <div className="leading-none">
+
+              <h1 className="text-white text-2xl font-bold">
+                Backbenchers
+              </h1>
+
+              <h1 className="text-[#5de6ff] text-2xl font-bold">
+                Academy
+              </h1>
+
+            </div>
+
+          </div>
+
+          {/* Description */}
+          <p className="text-gray-400 text-sm leading-6 mt-5 max-w-[280px]">
+            Empowering students with modern tech education,
+            mentorship, and industry-ready skills.
           </p>
 
-          <div className="flex gap-4 mt-6">
-            <div className="w-10 h-10 rounded-full bg-[#0f172a] flex items-center justify-center hover:bg-cyan-500 transition">
-              🌐
+          {/* Social Icons */}
+          <div className="flex gap-3 mt-5">
+
+            <div className="w-9 h-9 rounded-full bg-[#0f172a] border border-[#223047] flex items-center justify-center hover:border-[#5de6ff] hover:text-[#5de6ff] transition cursor-pointer">
+              <FaFacebookF size={14} />
             </div>
 
-            <div className="w-10 h-10 rounded-full bg-[#0f172a] flex items-center justify-center hover:bg-cyan-500 transition">
-              💻
+            <div className="w-9 h-9 rounded-full bg-[#0f172a] border border-[#223047] flex items-center justify-center hover:border-[#5de6ff] hover:text-[#5de6ff] transition cursor-pointer">
+              <FaInstagram size={14} />
             </div>
 
-            <div className="w-10 h-10 rounded-full bg-[#0f172a] flex items-center justify-center hover:bg-cyan-500 transition">
-              👨‍🎓
+            <div className="w-9 h-9 rounded-full bg-[#0f172a] border border-[#223047] flex items-center justify-center hover:border-[#5de6ff] hover:text-[#5de6ff] transition cursor-pointer">
+              <FaLinkedinIn size={14} />
             </div>
+
+            <div className="w-9 h-9 rounded-full bg-[#0f172a] border border-[#223047] flex items-center justify-center hover:border-[#5de6ff] hover:text-[#5de6ff] transition cursor-pointer">
+              <FaGithub size={14} />
+            </div>
+
           </div>
+
         </div>
 
         {/* Quick Links */}
         <div>
-          <h2 className="text-xl font-semibold mb-6">Quick Links</h2>
 
-          <ul className="space-y-4 text-gray-400">
-            <li className="hover:text-cyan-400 cursor-pointer">Home</li>
-            <li className="hover:text-cyan-400 cursor-pointer">Courses</li>
-            <li className="hover:text-cyan-400 cursor-pointer">Faculty</li>
-            <li className="hover:text-cyan-400 cursor-pointer">Book Store</li>
+          <h2 className="text-lg font-semibold mb-4">
+            Quick Links
+          </h2>
+
+          <ul className="space-y-3 text-sm text-gray-400">
+
+            <li className="hover:text-[#5de6ff] transition cursor-pointer">
+              Home
+            </li>
+
+            <li className="hover:text-[#5de6ff] transition cursor-pointer">
+              Courses
+            </li>
+
+            <li className="hover:text-[#5de6ff] transition cursor-pointer">
+              Faculty
+            </li>
+
+            <li className="hover:text-[#5de6ff] transition cursor-pointer">
+              Book Store
+            </li>
+
+            <li className="hover:text-[#5de6ff] transition cursor-pointer">
+              About
+            </li>
+
           </ul>
+
         </div>
 
         {/* Support */}
         <div>
-          <h2 className="text-xl font-semibold mb-6">Support</h2>
 
-          <ul className="space-y-4 text-gray-400">
-            <li className="hover:text-cyan-400 cursor-pointer">Privacy Policy</li>
-            <li className="hover:text-cyan-400 cursor-pointer">Terms of Service</li>
-            <li className="hover:text-cyan-400 cursor-pointer">FAQ</li>
-            <li className="hover:text-cyan-400 cursor-pointer">Support</li>
+          <h2 className="text-lg font-semibold mb-4">
+            Support
+          </h2>
+
+          <ul className="space-y-3 text-sm text-gray-400">
+
+            <li className="hover:text-[#5de6ff] transition cursor-pointer">
+              Privacy Policy
+            </li>
+
+            <li className="hover:text-[#5de6ff] transition cursor-pointer">
+              Terms & Conditions
+            </li>
+
+            <li className="hover:text-[#5de6ff] transition cursor-pointer">
+              Help Center
+            </li>
+
+            <li className="hover:text-[#5de6ff] transition cursor-pointer">
+              Contact
+            </li>
+
           </ul>
+
         </div>
 
-        {/* Newsletter */}
+        {/* Popular Courses */}
         <div>
-          <h2 className="text-xl font-semibold mb-6">Newsletter</h2>
 
-          <p className="text-gray-400 mb-6">
-            Get the latest updates on tech trends
-            and course launches.
-          </p>
+          <h2 className="text-lg font-semibold mb-4">
+            Popular Courses
+          </h2>
 
-          <div className="flex items-center bg-[#0f172a] rounded-xl overflow-hidden border border-cyan-900">
-            <input
-              type="email"
-              placeholder="Your Email"
-              className="bg-transparent px-4 py-3 w-full outline-none"
-            />
+          <ul className="space-y-3 text-sm text-gray-400">
 
-            <button className="bg-cyan-400 text-black px-5 py-3 hover:bg-cyan-300 transition">
-              <Send size={20} />
-            </button>
-          </div>
+            <li className="hover:text-[#5de6ff] transition cursor-pointer">
+              Full Stack Development
+            </li>
+
+            <li className="hover:text-[#5de6ff] transition cursor-pointer">
+              Data Science
+            </li>
+
+            <li className="hover:text-[#5de6ff] transition cursor-pointer">
+              Artificial Intelligence
+            </li>
+
+            <li className="hover:text-[#5de6ff] transition cursor-pointer">
+              Cyber Security
+            </li>
+
+            <li className="hover:text-[#5de6ff] transition cursor-pointer">
+              UI/UX Design
+            </li>
+
+          </ul>
+
         </div>
+
       </div>
 
-      {/* Bottom */}
-      <div className="border-t border-cyan-900 mt-14 pt-6 flex flex-col md:flex-row justify-between text-gray-500 text-sm">
-        <p>© 2024 Backbenchers Academy. All rights reserved.</p>
+      {/* Bottom Footer */}
+      <div className="border-t border-[#1e293b] mt-8 pt-5 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500">
+
+        <p>
+          © 2026 Backbenchers Academy. All rights reserved.
+        </p>
 
         <p className="mt-2 md:mt-0">
-          Designed for High Performance Learning
+          Designed for modern learners 🚀
         </p>
+
       </div>
+
     </footer>
   );
 };
