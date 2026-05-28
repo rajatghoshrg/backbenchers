@@ -22,10 +22,10 @@ const Navbar = () => {
       {/* Navbar */}
       <nav className="w-full bg-[#020817] border-b border-[#1e293b] px-4 md:px-8 py-3 flex items-center justify-between sticky top-0 z-50">
 
-        {/* Logo */}
+        {/* Left */}
         <div className="flex items-center gap-3">
 
-          {/* Logo Image */}
+          {/* Logo */}
           <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl overflow-hidden border border-[#223047]">
 
             <img
@@ -86,11 +86,11 @@ const Navbar = () => {
 
         </ul>
 
-        {/* Right Side */}
+        {/* Right */}
         <div className="flex items-center gap-3">
 
-          {/* Desktop Button */}
-          <div className="hidden md:block scale-90">
+          {/* Desktop Button ONLY */}
+          <div className="hidden lg:block scale-90">
             <Button text="Enroll Now" />
           </div>
 
