@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Button from "./Button";
 
 import {
@@ -8,109 +8,155 @@ import {
   FaStore,
   FaInfoCircle,
   FaEnvelope,
+  FaBars,
+  FaTimes,
 } from "react-icons/fa";
 
 const Navbar = () => {
+
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
-    <nav className="w-full bg-[#020817]/95 backdrop-blur-md border-b border-[#1e293b] px-5 md:px-10 py-3 flex items-center justify-between sticky top-0 z-50">
+    <>
 
-      {/* Left Section */}
-      <div className="flex items-center gap-3 cursor-pointer">
+      {/* Navbar */}
+      <nav className="w-full bg-[#020817]/95 backdrop-blur-md border-b border-[#1e293b] px-4 md:px-8 lg:px-12 py-3 flex items-center justify-between sticky top-0 z-50">
 
-        {/* Logo Container */}
-        <div className="w-12 h-12 md:w-14 md:h-14 rounded-2xl overflow-hidden border border-[#223047] bg-[#0f172a] flex items-center justify-center shadow-[0_0_20px_rgba(93,230,255,0.15)]">
+        {/* Left Section */}
+        <div className="flex items-center gap-3 cursor-pointer">
 
-          {/* Add your logo later */}
-          <img
-            src="/logo.png"
-            alt="Backbenchers Logo"
-            className="w-full h-full object-cover"
-          />
+          {/* Logo */}
+          <div className="w-10 h-10 md:w-12 md:h-12 rounded-2xl overflow-hidden border border-[#223047] bg-[#0f172a] flex items-center justify-center shadow-[0_0_20px_rgba(93,230,255,0.15)]">
+
+            <img
+              src="/logo.png"
+              alt="Backbenchers Logo"
+              className="w-full h-full object-cover"
+            />
+
+          </div>
+
+          {/* Website Name */}
+          <div className="leading-none">
+
+            <h1 className="text-white text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold">
+              Backbenchers
+            </h1>
+
+            <h1 className="text-[#5de6ff] text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold">
+              Academy
+            </h1>
+
+          </div>
 
         </div>
 
-        {/* Website Name */}
-        <div className="leading-none">
+        {/* Desktop Menu */}
+        <ul className="hidden lg:flex items-center gap-7 text-sm font-medium text-white">
 
-          <h1 className="text-white text-2xl md:text-3xl font-bold">
-            Backbenchers
-          </h1>
+          <li className="flex items-center gap-2 text-[#5de6ff] cursor-pointer">
+            <FaHome size={14} />
+            Home
+          </li>
 
-          <h1 className="text-[#5de6ff] text-2xl md:text-3xl font-bold">
-            Academy
-          </h1>
+          <li className="flex items-center gap-2 hover:text-[#5de6ff] transition cursor-pointer">
+            <FaBookOpen size={14} />
+            Courses
+          </li>
+
+          <li className="flex items-center gap-2 hover:text-[#5de6ff] transition cursor-pointer">
+            <FaChalkboardTeacher size={14} />
+            Faculty
+          </li>
+
+          <li className="flex items-center gap-2 hover:text-[#5de6ff] transition cursor-pointer">
+            <FaStore size={14} />
+            Book Store
+          </li>
+
+          <li className="flex items-center gap-2 hover:text-[#5de6ff] transition cursor-pointer">
+            <FaInfoCircle size={14} />
+            About
+          </li>
+
+          <li className="flex items-center gap-2 hover:text-[#5de6ff] transition cursor-pointer">
+            <FaEnvelope size={14} />
+            Contact
+          </li>
+
+        </ul>
+
+        {/* Right Section */}
+        <div className="flex items-center gap-3">
+
+          {/* Desktop Button */}
+          <div className="hidden md:block scale-90">
+            <Button text="Enroll Now" />
+          </div>
+
+          {/* Mobile Menu Button */}
+          <button
+            className="lg:hidden text-white text-xl"
+            onClick={() => setMenuOpen(!menuOpen)}
+          >
+
+            {
+              menuOpen
+                ? <FaTimes />
+                : <FaBars />
+            }
+
+          </button>
 
         </div>
 
-      </div>
+      </nav>
 
-      {/* Center Nav Links */}
-      <ul className="hidden lg:flex items-center gap-7 text-sm font-medium text-white">
+      {/* Mobile Menu */}
+      {
+        menuOpen && (
+          <div className="lg:hidden bg-[#020817] border-b border-[#1e293b] px-6 py-6 space-y-5 text-white text-sm font-medium">
 
-        {/* Home */}
-        <li className="relative flex items-center gap-2 text-[#5de6ff] cursor-pointer">
+            <div className="flex items-center gap-3 hover:text-[#5de6ff] transition cursor-pointer">
+              <FaHome />
+              Home
+            </div>
 
-          <FaHome size={14} />
+            <div className="flex items-center gap-3 hover:text-[#5de6ff] transition cursor-pointer">
+              <FaBookOpen />
+              Courses
+            </div>
 
-          Home
+            <div className="flex items-center gap-3 hover:text-[#5de6ff] transition cursor-pointer">
+              <FaChalkboardTeacher />
+              Faculty
+            </div>
 
-          <span className="absolute left-0 -bottom-1 w-full h-[2px] rounded-full bg-[#5de6ff]"></span>
+            <div className="flex items-center gap-3 hover:text-[#5de6ff] transition cursor-pointer">
+              <FaStore />
+              Book Store
+            </div>
 
-        </li>
+            <div className="flex items-center gap-3 hover:text-[#5de6ff] transition cursor-pointer">
+              <FaInfoCircle />
+              About
+            </div>
 
-        {/* Courses */}
-        <li className="flex items-center gap-2 hover:text-[#5de6ff] transition duration-300 cursor-pointer">
+            <div className="flex items-center gap-3 hover:text-[#5de6ff] transition cursor-pointer">
+              <FaEnvelope />
+              Contact
+            </div>
 
-          <FaBookOpen size={14} />
+            {/* Mobile Button */}
+            <div className="pt-3">
+              <Button text="Enroll Now" />
+            </div>
 
-          Courses
+          </div>
+        )
+      }
 
-        </li>
-
-        {/* Faculty */}
-        <li className="flex items-center gap-2 hover:text-[#5de6ff] transition duration-300 cursor-pointer">
-
-          <FaChalkboardTeacher size={14} />
-
-          Faculty
-
-        </li>
-
-        {/* Store */}
-        <li className="flex items-center gap-2 hover:text-[#5de6ff] transition duration-300 cursor-pointer">
-
-          <FaStore size={14} />
-
-          Book Store
-
-        </li>
-
-        {/* About */}
-        <li className="flex items-center gap-2 hover:text-[#5de6ff] transition duration-300 cursor-pointer">
-
-          <FaInfoCircle size={14} />
-
-          About
-
-        </li>
-
-        {/* Contact */}
-        <li className="flex items-center gap-2 hover:text-[#5de6ff] transition duration-300 cursor-pointer">
-
-          <FaEnvelope size={14} />
-
-          Contact
-
-        </li>
-
-      </ul>
-
-      {/* Right Button */}
-      <div className="scale-75 md:scale-90">
-        <Button text="Enroll Now" />
-      </div>
-
-    </nav>
+    </>
   );
 };
 

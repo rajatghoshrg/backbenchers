@@ -5,6 +5,9 @@ import {
   FaInstagram,
   FaLinkedinIn,
   FaGithub,
+  FaMapMarkerAlt,
+  FaEnvelope,
+  FaPhoneAlt,
 } from "react-icons/fa";
 
 const Footer = () => {
@@ -138,36 +141,44 @@ const Footer = () => {
 
         </div>
 
-        {/* Popular Courses */}
+        {/* Address */}
         <div>
 
           <h2 className="text-lg font-semibold mb-4">
-            Popular Courses
+            Address
           </h2>
 
-          <ul className="space-y-3 text-sm text-gray-400">
+          <div className="space-y-4 text-sm text-gray-400">
 
-            <li className="hover:text-[#5de6ff] transition cursor-pointer">
-              Full Stack Development
-            </li>
+            <div className="flex items-start gap-3">
 
-            <li className="hover:text-[#5de6ff] transition cursor-pointer">
-              Data Science
-            </li>
+              <FaMapMarkerAlt className="text-[#5de6ff] mt-1" />
 
-            <li className="hover:text-[#5de6ff] transition cursor-pointer">
-              Artificial Intelligence
-            </li>
+              <p>
+                Backbenchers Academy <br />
+                Kolkata, West Bengal <br />
+                India
+              </p>
 
-            <li className="hover:text-[#5de6ff] transition cursor-pointer">
-              Cyber Security
-            </li>
+            </div>
 
-            <li className="hover:text-[#5de6ff] transition cursor-pointer">
-              UI/UX Design
-            </li>
+            <div className="flex items-center gap-3">
 
-          </ul>
+              <FaEnvelope className="text-[#5de6ff]" />
+
+              <p>support@backbenchers.com</p>
+
+            </div>
+
+            <div className="flex items-center gap-3">
+
+              <FaPhoneAlt className="text-[#5de6ff]" />
+
+              <p>+91 9876543210</p>
+
+            </div>
+
+          </div>
 
         </div>
 
