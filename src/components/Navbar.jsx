@@ -18,32 +18,32 @@ const Navbar = () => {
 
   return (
     <>
-
+    
       {/* Navbar */}
-      <nav className="w-full bg-[#020817]/95 backdrop-blur-md border-b border-[#1e293b] px-4 md:px-8 lg:px-12 py-3 flex items-center justify-between sticky top-0 z-50">
+      <nav className="w-full bg-[#020817] border-b border-[#1e293b] px-4 md:px-8 py-3 flex items-center justify-between sticky top-0 z-50">
 
-        {/* Left Section */}
-        <div className="flex items-center gap-3 cursor-pointer">
+        {/* Logo */}
+        <div className="flex items-center gap-3">
 
-          {/* Logo */}
-          <div className="w-10 h-10 md:w-12 md:h-12 rounded-2xl overflow-hidden border border-[#223047] bg-[#0f172a] flex items-center justify-center shadow-[0_0_20px_rgba(93,230,255,0.15)]">
+          {/* Logo Image */}
+          <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl overflow-hidden border border-[#223047]">
 
             <img
               src="/logo.png"
-              alt="Backbenchers Logo"
+              alt="Logo"
               className="w-full h-full object-cover"
             />
 
           </div>
 
-          {/* Website Name */}
+          {/* Text */}
           <div className="leading-none">
 
-            <h1 className="text-white text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold">
+            <h1 className="text-white text-lg md:text-2xl font-bold">
               Backbenchers
             </h1>
 
-            <h1 className="text-[#5de6ff] text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold">
+            <h1 className="text-[#5de6ff] text-lg md:text-2xl font-bold">
               Academy
             </h1>
 
@@ -52,41 +52,41 @@ const Navbar = () => {
         </div>
 
         {/* Desktop Menu */}
-        <ul className="hidden lg:flex items-center gap-7 text-sm font-medium text-white">
+        <ul className="hidden lg:flex items-center gap-8 text-white text-sm font-medium">
 
           <li className="flex items-center gap-2 text-[#5de6ff] cursor-pointer">
-            <FaHome size={14} />
+            <FaHome />
             Home
           </li>
 
           <li className="flex items-center gap-2 hover:text-[#5de6ff] transition cursor-pointer">
-            <FaBookOpen size={14} />
+            <FaBookOpen />
             Courses
           </li>
 
           <li className="flex items-center gap-2 hover:text-[#5de6ff] transition cursor-pointer">
-            <FaChalkboardTeacher size={14} />
+            <FaChalkboardTeacher />
             Faculty
           </li>
 
           <li className="flex items-center gap-2 hover:text-[#5de6ff] transition cursor-pointer">
-            <FaStore size={14} />
+            <FaStore />
             Book Store
           </li>
 
           <li className="flex items-center gap-2 hover:text-[#5de6ff] transition cursor-pointer">
-            <FaInfoCircle size={14} />
+            <FaInfoCircle />
             About
           </li>
 
           <li className="flex items-center gap-2 hover:text-[#5de6ff] transition cursor-pointer">
-            <FaEnvelope size={14} />
+            <FaEnvelope />
             Contact
           </li>
 
         </ul>
 
-        {/* Right Section */}
+        {/* Right Side */}
         <div className="flex items-center gap-3">
 
           {/* Desktop Button */}
@@ -96,7 +96,7 @@ const Navbar = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="lg:hidden text-white text-xl"
+            className="lg:hidden text-white text-2xl"
             onClick={() => setMenuOpen(!menuOpen)}
           >
 
@@ -115,42 +115,46 @@ const Navbar = () => {
       {/* Mobile Menu */}
       {
         menuOpen && (
-          <div className="lg:hidden bg-[#020817] border-b border-[#1e293b] px-6 py-6 space-y-5 text-white text-sm font-medium">
+          <div className="lg:hidden bg-[#020817] border-b border-[#1e293b] px-6 py-5">
 
-            <div className="flex items-center gap-3 hover:text-[#5de6ff] transition cursor-pointer">
-              <FaHome />
-              Home
-            </div>
+            <ul className="flex flex-col gap-5 text-white text-sm font-medium">
 
-            <div className="flex items-center gap-3 hover:text-[#5de6ff] transition cursor-pointer">
-              <FaBookOpen />
-              Courses
-            </div>
+              <li className="flex items-center gap-3 text-[#5de6ff] cursor-pointer">
+                <FaHome />
+                Home
+              </li>
 
-            <div className="flex items-center gap-3 hover:text-[#5de6ff] transition cursor-pointer">
-              <FaChalkboardTeacher />
-              Faculty
-            </div>
+              <li className="flex items-center gap-3 hover:text-[#5de6ff] transition cursor-pointer">
+                <FaBookOpen />
+                Courses
+              </li>
 
-            <div className="flex items-center gap-3 hover:text-[#5de6ff] transition cursor-pointer">
-              <FaStore />
-              Book Store
-            </div>
+              <li className="flex items-center gap-3 hover:text-[#5de6ff] transition cursor-pointer">
+                <FaChalkboardTeacher />
+                Faculty
+              </li>
 
-            <div className="flex items-center gap-3 hover:text-[#5de6ff] transition cursor-pointer">
-              <FaInfoCircle />
-              About
-            </div>
+              <li className="flex items-center gap-3 hover:text-[#5de6ff] transition cursor-pointer">
+                <FaStore />
+                Book Store
+              </li>
 
-            <div className="flex items-center gap-3 hover:text-[#5de6ff] transition cursor-pointer">
-              <FaEnvelope />
-              Contact
-            </div>
+              <li className="flex items-center gap-3 hover:text-[#5de6ff] transition cursor-pointer">
+                <FaInfoCircle />
+                About
+              </li>
 
-            {/* Mobile Button */}
-            <div className="pt-3">
-              <Button text="Enroll Now" />
-            </div>
+              <li className="flex items-center gap-3 hover:text-[#5de6ff] transition cursor-pointer">
+                <FaEnvelope />
+                Contact
+              </li>
+
+              {/* Mobile Button */}
+              <div className="pt-3">
+                <Button text="Enroll Now" />
+              </div>
+
+            </ul>
 
           </div>
         )
