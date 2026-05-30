@@ -8,7 +8,7 @@ const BookCard = ({ book }) => {
   return (
     <div className="bg-[rgba(18,33,49,0.7)] border border-[#273647] rounded-3xl p-5 hover:border-[#5de6ff] transition-all duration-300">
 
-      <div className="h-52 bg-[#0d1c2d] rounded-2xl flex items-center justify-center">
+      <div className="h-44 bg-[#0d1c2d] rounded-2xl flex items-center justify-center">
         <FaBookOpen className="text-6xl text-[#5de6ff]" />
       </div>
 

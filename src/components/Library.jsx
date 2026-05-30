@@ -16,7 +16,7 @@ const Library = () => {
           </h2>
 
           <p className="text-[#94a3b8] mt-3">
-            Books written by our mentors and industry experts.
+            Books written by our mentors.
           </p>
         </div>
 
