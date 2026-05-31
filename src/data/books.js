@@ -8,17 +8,17 @@ const books = [
   },
   {
     id: 2,
-    title: "Full Stack Development",
+    title: "C Programming",
     author: "Ranjan Banerjee",
     price: "₹399",
-    image: "/books/fullstack-book.jpg",
+    image: "/books/c-book.jpg",
   },
   {
     id: 3,
-    title: "Programming Fundamentals",
+    title: "Data Dynamo",
     author: "Ranjan Banerjee",
     price: "₹249",
-    image: "/books/programming-book.jpg",
+    image: "/books/data-dynamo-book.jpg",
   },
 ];
 

@@ -12,7 +12,7 @@ const Library = () => {
 
         <div>
           <h2 className="text-4xl font-bold">
-            Elite <span className="text-[#5de6ff]">Library</span>
+            Backbencher's <span className="text-[#5de6ff]">Library</span>
           </h2>
 
           <p className="text-[#94a3b8] mt-3">
